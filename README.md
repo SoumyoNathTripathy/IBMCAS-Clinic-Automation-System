@@ -107,4 +107,4 @@ Authentication: Windows Authentication
 ## License
 [![MIT](https://img.shields.io/cocoapods/l/AFNetworking.svg?style=style&label=License&maxAge=2592000)](../master/LICENSE)
 
-Copyright (c) 2018-present, harismuneer, HassaanElahi, FarhanShoukat, Kashan.Sid                              
+Copyright (c) Soumyo Nath Tripathy, Subroto Rakshit, Rishi Agarwal                              
