@@ -1,0 +1,65 @@
+﻿@model IBMCAS.Models.AppointmentViewModel
+
+<div class="container m-2">
+    <h5>Appointmnet Details: </h5>
+    <div class="row p-2">
+        <div class="col">
+            <div class="row">
+                <div class="col"><strong>Appointment Token:</strong></div>
+                <div class="col">@Html.DisplayFor(model => model.appointment.AppointmentToken)</div>
+            </div>
+            <div class="row">
+                <div class="col"><strong>Patient MR No:</strong></div>
+                <div class="col">@Html.DisplayFor(model => model.appointment.Patient.PatientMRNumber)</div>
+            </div>
+            <div class="row">
+                <div class="col"><strong>Patient Name:</strong></div>
+                <div class="col">@Html.DisplayFor(model => model.appointment.Patient.PatientFirstName) @Html.DisplayFor(model => model.appointment.Patient.PatientLastName)</div>
+            </div>
+            <div class="row">
+                <div class="col"><strong>Physician Name:</strong></div>
+                <div class="col">@Html.DisplayFor(model => model.appointment.Physician.PhysicianName)</div>
+            </div>
+            <div class="row">
+                <div class="col"><strong>Scheduled Date:</strong></div>
+                <div class="col">@Model.appointment.ScheduledDate.Date.ToString("dd-MM-yyyy")</div>
+            </div>
+            <div class="row">
+                <div class="col"><strong>Scheduled Time:</strong></div>
+                <div class="col">@Html.DisplayFor(model => model.appointment.ScheduledTime):00</div>
+            </div>
+        </div>
+        <div class="col">
+            <p><strong>Advise: </strong> @Html.DisplayFor(model => model.advice.AdviceText)</p>
+              
+        </div>
+    </div>
+    <div class="mb-1">
+        <table class="table">
+            <tr>
+                <th colspan="3">Precriptions:</th>
+            </tr>
+            <tr>
+                <th>
+                    Drug Name
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+
+            @foreach (var item in Model.prescriptions)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Drug.DrugName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

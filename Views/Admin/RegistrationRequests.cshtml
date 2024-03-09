@@ -1,0 +1,76 @@
+﻿@model IEnumerable<IBMCAS.Models.PatientRegistrationQueue>
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RegistrationRequests</title>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <th>
+                Token No
+            </th>
+            <th>
+                Date
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Phone No
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Gender
+            </th>
+            <th>
+                Aadhaar No
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegistrationTokenNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
+            </td>   
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientFirstName) 
+                @Html.DisplayFor(modelItem => item.PatientLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientGender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientAadhaarNumber)
+            </td>
+            <td>
+                <button type="button" class="btn btn-outline-success">
+                    <a href="@Url.Action("ShowOneRegistrationRequest", new { id = item.RegistrationTokenNo })" style="color: black; text-decoration: none !important">Select</a>
+                </button>
+                @*@Html.ActionLink("GO", "ShowOneRegistrationRequest", new { id = item.RegistrationTokenNo })*@
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

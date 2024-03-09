@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="151a85b3dee64b04a57844afabf77dbf" Name="Diagram1">
+        <EntityTypeShape EntityType="IBMCASDBModel.Advice" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IBMCASDBModel.Appointment" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IBMCASDBModel.AppointmentRequest" Width="1.5" PointX="6" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IBMCASDBModel.chemist" Width="1.5" PointX="2.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IBMCASDBModel.Drug" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IBMCASDBModel.DrugRequest" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IBMCASDBModel.Patient" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IBMCASDBModel.PatientRegistrationQueue" Width="1.5" PointX="8.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IBMCASDBModel.Physician" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IBMCASDBModel.Prescription" Width="1.5" PointX="7.5" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IBMCASDBModel.PurchaseOrderHeader" Width="1.5" PointX="5.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IBMCASDBModel.PurchaseOrderProductLine" Width="1.5" PointX="7.5" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IBMCASDBModel.Supplier" Width="1.5" PointX="3" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IBMCASDBModel.UserCred" Width="1.5" PointX="4.75" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="IBMCASDBModel.FK__Advice__Schedule__7908F585" ManuallyRouted="false" />
+        <AssociationConnector Association="IBMCASDBModel.FK__Prescript__Presc__038683F8" ManuallyRouted="false" />
+        <AssociationConnector Association="IBMCASDBModel.FK__Appointme__Patie__753864A1" ManuallyRouted="false" />
+        <AssociationConnector Association="IBMCASDBModel.FK__Appointme__Physi__762C88DA" ManuallyRouted="false" />
+        <AssociationConnector Association="IBMCASDBModel.FK__Appointme__Patie__7CD98669" ManuallyRouted="false" />
+        <AssociationConnector Association="IBMCASDBModel.FK__Appointme__Physi__7DCDAAA2" ManuallyRouted="false" />
+        <AssociationConnector Association="IBMCASDBModel.FK__Prescript__DrugI__047AA831" ManuallyRouted="false" />
+        <AssociationConnector Association="IBMCASDBModel.FK__PurchaseO__DrugI__0B27A5C0" ManuallyRouted="false" />
+        <AssociationConnector Association="IBMCASDBModel.FK__DrugReque__Reque__00AA174D" ManuallyRouted="false" />
+        <AssociationConnector Association="IBMCASDBModel.FK__PurchaseO__Purch__0A338187" ManuallyRouted="false" />
+        <AssociationConnector Association="IBMCASDBModel.FK__PurchaseO__Suppl__075714DC" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

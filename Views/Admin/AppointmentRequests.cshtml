@@ -1,0 +1,62 @@
+﻿@model IEnumerable<IBMCAS.Models.AppointmentRequest>
+
+@{
+    ViewBag.Title = "ApointmentRequests";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Apointment Requests</h2>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Token No
+        </th>
+        <th>
+            Patient
+        </th>
+        <th>
+            Physician
+        </th>
+        <th>
+            Date Created
+        </th>
+        <th>
+            Date Requested
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AppointmentRequestToken)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient.PatientMRNumber) - @Html.DisplayFor(modelItem => item.Patient.PatientFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhysicianID) - @Html.DisplayFor(modelItem => item.Physician.PhysicianName)
+        </td>
+        <td>
+            @item.DateCreated.Date.ToString("dd-MM-yyyy")
+        </td>
+        <td>
+            @item.DateRequested.Date.ToString("dd-MM-yyyy")
+        </td>
+
+        <td>
+            <button type="button" class="btn btn-outline-warning">
+                <a href="@Url.Action("Schedule", new { id = item.AppointmentRequestToken })" style="color: black; text-decoration: none !important">Schedule</a>
+            </button>
+            <button type="button" class="btn btn-outline-danger">
+                <a href="@Url.Action("RejectAppointmentRequest", new { id = item.AppointmentRequestToken })" style="color: black; text-decoration: none !important">Reject</a>
+            </button>
+        </td>
+    </tr>
+}
+
+</table>
